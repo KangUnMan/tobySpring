@@ -14,12 +14,12 @@ class UserDaoTest {
         ConnectionMaker connectionMaker = new DConnectionMaker();
         UserDao userDao = new UserDao(connectionMaker);
         User user = new User();
-        user.setId("2");
-        user.setName("dsa");
+        user.setId("3");
+        user.setName("kang");
         user.setPassword("1234");
-        //userDao.add(user);
+       // userDao.add(user);
 
-        User selectedUser = userDao.get("2"); // 검색
+        User selectedUser = userDao.get("3"); // 검색
         System.out.println(selectedUser.getId());
         System.out.println(selectedUser.getName());
         System.out.println(selectedUser.getPassword());

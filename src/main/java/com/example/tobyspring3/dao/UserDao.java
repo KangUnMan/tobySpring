@@ -45,14 +45,4 @@ public class UserDao {
 
         return user;
     }
-
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        ConnectionMaker connectionMaker = new DConnectionMaker();
-        UserDao userDao = new UserDao(connectionMaker);
-
-        User selectedUser = userDao.get("2"); // 검색
-        System.out.println(selectedUser.getId());
-        System.out.println(selectedUser.getName());
-        System.out.println(selectedUser.getPassword());
-    }
 }
