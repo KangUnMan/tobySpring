@@ -7,8 +7,9 @@ import java.util.Map;
 
 import static java.lang.System.getenv;
 
-public class SimpleConnectionMaker {
-    public Connection getConnetion() throws SQLException, ClassNotFoundException {
+public class DConnectionMaker implements ConnectionMaker {
+    @Override
+    public Connection makeConnection() throws SQLException, ClassNotFoundException {
         Map<String, String> env = getenv();
         String dbHost = env.get("DB_HOST");
         String dbUser = env.get("DB_USER");
